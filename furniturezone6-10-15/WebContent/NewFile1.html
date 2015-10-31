@@ -1,0 +1,76 @@
+<html><head>
+
+<title>Create onMouseOver Image Slide Show</title>
+
+
+<script>
+
+/*Rollover effect on different image script-
+By JavaScript Kit (http://javascriptkit.com)
+Over 200+ free scripts here!
+*/
+
+function changeimage(towhat,url){
+if (document.images){
+document.images.targetimage.src=towhat.src
+gotolink=url
+}
+}
+function sshow(){
+window.location=gotolink
+}
+
+</script>
+<script language="JavaScript1.1">
+var myimages=new Array()
+var gotolink="#"
+
+function preloadimages(){
+for (i=0;i<preloadimages.arguments.length;i++){
+myimages[i]=new Image()
+myimages[i].src=preloadimages.arguments[i]
+}
+}
+
+
+preloadimages("IMG/1.jpg","IMG/1234.png","IMG/image.jpg","IMG/images.jpg","IMG/fz.jpg");
+
+</script>
+
+
+</head>
+
+<body style="padding:5px;margin:0;background:#A8D672;">
+
+<table style="border:1px dashed #020;" border=0 cellpadding=5 cellspacing=5 width=415>
+
+<tr>
+<td align=center valign=top>
+
+<a href="javascript:sshow()"><img style="background:#fff;padding:1px; border:1px solid #050;" src="IMG/1.jpg" name="targetimage" border=0></a>
+
+</td>
+</tr><tr>
+
+<td align=center valign=middle>
+
+<a href="destination1.html" onMouseover="changeimage(myimages[0],this.href)"><img style="background:#fff;padding:1px; border:1px solid #050;" border=0 src="IMG/1234.png" /></a>
+<a href="destination2.html" onMouseover="changeimage(myimages[1],this.href)"><img style="background:#fff;padding:1px; border:1px solid #050;" border=0 src="2-small.jpg" /></a>
+<a href="destination3.html" onMouseover="changeimage(myimages[2],this.href)"><img style="background:#fff;padding:1px; border:1px solid #050;" border=0 src="3-small.jpg" /></a>
+<a href="destination4.html" onMouseover="changeimage(myimages[3],this.href)"><img style="background:#fff;padding:1px; border:1px solid #050;" border=0 src="4-small.jpg" /></a>
+<a href="destination5.html" onMouseover="changeimage(myimages[4],this.href)"><img style="background:#fff;padding:1px; border:1px solid #050;" border=0 src="5-small.jpg" /></a>
+
+</td>
+
+</tr><tr>
+
+<td align=center valign=middle>
+<span style="font:normal 13px verdana; color:#020; letter-spacing:0px;">
+<< Move cursor on thumbnails to view the slideshow >></span>
+</td>
+
+</tr></table>
+
+
+</body>
+</html>
